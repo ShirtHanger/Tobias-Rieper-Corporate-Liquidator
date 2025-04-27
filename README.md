@@ -1,2 +1,1 @@
-# General-Assembly-Dash-Project-3
-My work for the General Assembly Dash Course. Project 3
+Mock up portfolio/freelance website for Agent 47 from the Hitman franchise
