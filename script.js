@@ -1,30 +1,16 @@
-// Alteratively, try:
-
-// const setColor = (colorClass) => () => { // Ashley said this would fix it, no clue how...
-//     document.body.classList.toggle(colorClass)
-//     // This makes it an anonymous function, meaning it must be specifically
-//     // Called to execute, not execute immedietly
-//     // Think of it as a container, will not execute
-        // Unless you call it
-// }
-
-
 divElements = document.querySelectorAll('div')
 
 for (divElement of divElements) {
-    divElement.addEventListener('click', () => {
-        alert('Click!')
-        divElement.classList.toggle('show-description')
+    divElement.addEventListener('click', function () {
+        this.classList.toggle('show-description') // 'this' makes this outdated stuff work 
+        // divElement.classList.toggle('show-description') // this does not work
     })
 }
 
-/* STILL WONT WORK! */
+/* Original code, arrow functions do not work with this website for some reason */
 
-/* Here's the original code that General Assembly Dash told me to use for this
-
- $('div').on('click', function() {
-     $(this).toggleClass('show-description');
- });
-
-Outdated  af apparently. Couldn't figure out why it worked on Dash but not my computer until I learned about DOM manipulation
-in the actual General Assembly Bootcamp */
+// for (divElement of divElements) {
+//     divElement.addEventListener('click', () => {
+//         divElement.classList.toggle('show-description')
+//     })
+// }
